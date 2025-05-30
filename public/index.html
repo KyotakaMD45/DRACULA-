@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aesther - Futuristic Bot Panel</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6067029417509870" crossorigin="anonymous"></script>
+  <title>Pharouk - Futuristic Bot Panel</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --primary: #a18cd1;
-      --secondary: #84c6f8;
-      --accent: #fbc2eb;
-      --text: #e0e0e0;
+      --primary: #ffffff;
+      --secondary: #bfbfbf;
+      --accent: #888888;
+      --text: #ffffff;
       --bg: #0d0d0d;
     }
 
     body {
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, var(--bg), #1a1a1a);
+      background-color: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 0;
@@ -25,7 +24,7 @@
     }
 
     header {
-      background-color: rgba(20, 20, 20, 0.8);
+      background-color: #1a1a1a;
       padding: 15px 20px;
       display: flex;
       align-items: center;
@@ -33,9 +32,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.4);
     }
 
     .logo {
@@ -44,14 +41,11 @@
       font-size: 24px;
       color: var(--primary);
       letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(161, 140, 209, 0.3);
     }
 
     .hamburger {
       font-size: 28px;
       cursor: pointer;
-      display: block;
-      user-select: none;
       color: var(--primary);
     }
 
@@ -61,149 +55,121 @@
       position: absolute;
       top: 60px;
       right: 20px;
-      background-color: rgba(30, 30, 30, 0.95);
+      background-color: #1a1a1a;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 5px 20px rgba(255,255,255,0.05);
       z-index: 100;
     }
 
     .nav-links a {
-      color: #ccc;
+      color: var(--text);
       padding: 12px 25px;
       text-decoration: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
+      border-bottom: 1px solid #333;
     }
 
     .nav-links a:hover {
-      background-color: #333;
+      background-color: #2a2a2a;
       color: var(--primary);
     }
 
     .container {
       max-width: 700px;
       margin: 30px auto;
-      background-color: #1c1c1c;
+      background-color: #1a1a1a;
       padding: 35px;
       border-radius: 18px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(5px);
+      box-shadow: 0 5px 25px rgba(255,255,255,0.05);
     }
 
     h1 {
       text-align: center;
-      font-size: 3.5rem;
-      margin: 0 0 10px 0;
-      color: var(--primary);
+      font-size: 3rem;
+      margin-bottom: 10px;
       font-family: 'Orbitron', sans-serif;
-      font-weight: 500;
-      text-shadow: 0 0 15px rgba(161, 140, 209, 0.3);
-      letter-spacing: 3px;
-    }
-
-    h1::after {
-      content: "";
-      display: block;
-      width: 100px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      margin: 15px auto;
-      border-radius: 3px;
+      color: var(--primary);
     }
 
     h2 {
       text-align: center;
-      color: #aaa;
-      font-weight: 500;
-      margin-bottom: 25px;
+      color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
-      letter-spacing: 1px;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 25px;
     }
 
     label {
       display: block;
       margin-bottom: 8px;
-      color: #bbb;
-      font-weight: 500;
-    }
-
-    textarea, input, button {
-      width: 100%;
-      margin-bottom: 20px;
-      padding: 12px 15px;
-      border: none;
-      border-radius: 8px;
-      font-size: 15px;
-      font-family: 'Quicksand', sans-serif;
-      box-sizing: border-box;
+      color: var(--secondary);
     }
 
     textarea, input {
-      background-color: #2a2a2a;
-      color: #e0e0e0;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px 15px;
+      background-color: #111;
       border: 1px solid #444;
+      border-radius: 8px;
+      color: var(--text);
     }
 
     textarea:focus, input:focus {
       outline: none;
       border-color: var(--primary);
-      background-color: #333;
-      box-shadow: 0 0 0 3px rgba(161, 140, 209, 0.3);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
     }
 
     button {
+      width: 100%;
+      padding: 12px;
       background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 10px;
-      box-shadow: 0 2px 10px rgba(161, 140, 209, 0.3);
+      color: #000;
+      font-weight: bold;
       border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.1);
     }
 
     button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(161, 140, 209, 0.4);
+      background: linear-gradient(135deg, #f5f5f5, #999);
     }
 
     .mini-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       max-height: 300px;
       overflow-y: auto;
       margin-bottom: 20px;
       border: 1px solid #444;
       padding: 15px;
       border-radius: 12px;
-      background-color: #1a1a1a;
+      background-color: #0f0f0f;
     }
 
     .cmd-item {
-      background-color: #222;
-      color: var(--text);
-      font-size: 16px;
-      padding: 12px 16px;
+      background-color: #2a2a2a;
+      border: 1px solid #555;
+      padding: 10px 18px;
+      font-size: 15px;
       border-radius: 8px;
+      color: var(--text);
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      user-select: none;
+      transition: 0.3s;
     }
 
     .cmd-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+      background-color: #3a3a3a;
     }
 
     .cmd-item.selected {
       background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      border-color: var(--primary);
+      color: black;
     }
 
     #result {
@@ -214,19 +180,6 @@
       border-radius: 8px;
     }
 
-    .grid-lines {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 30px 30px;
-      pointer-events: none;
-      z-index: -1;
-    }
-
     @media (max-width: 768px) {
       .container {
         margin: 20px 15px;
@@ -234,25 +187,23 @@
       }
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="grid-lines"></div>
-
   <header>
-    <div class="logo">AESTHER</div>
+    <div class="logo">PHAROUK</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="apis.html">API Docs</a>
+      <a href="#">Home</a>
+      <a href="#">API Docs</a>
     </div>
   </header>
 
   <div class="container">
-    <h1>AESTHER</h1>
+    <h1>PHAROUK</h1>
     <h2>BOT MANAGEMENT CONSOLE</h2>
 
     <label>AppState (JSON):</label>
@@ -280,8 +231,6 @@
         const cmds = await res.json();
         const container = document.getElementById('commandContainer');
 
-        if (!Array.isArray(cmds)) throw new Error('Invalid data');
-
         cmds.forEach(cmd => {
           if (cmd.admin) return;
 
@@ -289,27 +238,23 @@
           item.classList.add('cmd-item');
           item.textContent = cmd.name;
           item.title = `Usage: ${cmd.usage || 'No usage info'}`;
-          item.addEventListener('click', () => {
-            item.classList.toggle('selected');
-          });
+          item.onclick = () => item.classList.toggle('selected');
           container.appendChild(item);
         });
-      } catch (err) {
-        console.error('Error loading commands:', err);
-        document.getElementById('commandContainer').innerHTML =
-          `<div style="color:red;">Error loading commands</div>`;
+      } catch (error) {
+        document.getElementById('commandContainer').innerHTML = '<div style="color:red;text-align:center;">Failed to load commands.</div>';
       }
     }
 
     async function addBot() {
       const appStateText = document.getElementById('appState').value.trim();
       const ownerUid = document.getElementById('ownerUid').value.trim();
-      const selectedCommands = Array.from(document.querySelectorAll('.cmd-item.selected')).map(el => el.textContent);
+      const selectedCommands = [...document.querySelectorAll('.cmd-item.selected')].map(el => el.textContent);
       const resultElement = document.getElementById('result');
 
       if (!appStateText) {
         resultElement.innerText = "❌ Please enter your appState JSON!";
-        resultElement.style.backgroundColor = "#331111";
+        resultElement.style.backgroundColor = "#330000";
         return;
       }
 
@@ -318,35 +263,31 @@
         appState = JSON.parse(appStateText);
       } catch (e) {
         resultElement.innerText = "❌ Invalid appState JSON!";
-        resultElement.style.backgroundColor = "#331111";
+        resultElement.style.backgroundColor = "#330000";
         return;
       }
 
       try {
-        const response = await fetch('/api/add-bot', {
+        const res = await fetch('/api/add-bot', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ appState, ownerUid, selectedCommands })
         });
-
-        const result = await response.json();
-        if (result.success) {
-          resultElement.innerText = `✅ Bot added successfully! Bot ID: ${result.botID}`;
-          resultElement.style.backgroundColor = "#113311";
+        const data = await res.json();
+        if (data.success) {
+          resultElement.innerText = `✅ success Bot ID: ${data.botID}`;
+          resultElement.style.backgroundColor = "#003300";
         } else {
-          resultElement.innerText = `❌ Failed: ${result.error || 'Unknown error'}`;
-          resultElement.style.backgroundColor = "#331111";
+          resultElement.innerText = `❌ Failed: ${data.error}`;
+          resultElement.style.backgroundColor = "#330000";
         }
-      } catch (e) {
-        console.error('Error adding bot:', e);
-        resultElement.innerText = `❌ Network error: ${e.message}`;
-        resultElement.style.backgroundColor = "#331111";
+      } catch (err) {
+        resultElement.innerText = `❌ Network error: ${err.message}`;
+        resultElement.style.backgroundColor = "#330000";
       }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      loadCommands();
-    });
+    document.addEventListener('DOMContentLoaded', loadCommands);
   </script>
 </body>
-  </html>
+</html>
